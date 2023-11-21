@@ -41,6 +41,14 @@ body {
 }
 
 .layout_padding {
+  background-image: url(/images/Background\ About.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 75px 0;
+}
+
+.layout_padding_about {
   background-image: url(/images/Dream\ setup\ 2.jpg);
   background-size: cover;
   background-position: center;
