@@ -40,6 +40,17 @@ body {
   object-position: center;
 }
 
+.custom_heading {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(0, 0, 0); 
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+  
+
 .layout_padding {
   background-image: url(/images/Dream\ setup\ 2.jpg);
   background-size: cover;
@@ -74,11 +85,6 @@ body {
 
 .layout_padding-bottom {
   padding-bottom: 75px;
-}
-
-.custom_heading {
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 /*header section*/
