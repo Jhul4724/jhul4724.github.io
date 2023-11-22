@@ -42,7 +42,7 @@ Embark on your technology journey by visiting our website at [https://www.innova
 1. **Explore Our Spectrum:**
    - Navigate through the diverse range of services offered by Innova Tech, from custom PC builds to advanced IT solutions.
 2. **Consultation Services:**
-   - Reach out via email at hujulien123@gmail.com or connect on LinkedIn [Julien Hu](https://www.linkedin.com/in/julienhu/) for personalized consultations and inquiries.
+   - Reach out via email at info@innovatechpc.ca or connect on LinkedIn [Julien Hu](https://www.linkedin.com/in/julienhu/) for personalized consultations and inquiries.
 3. **Direct Line:**
    - For direct inquiries and discussions about your technological needs, give us a call at 438-929-5064.
 
@@ -61,7 +61,7 @@ Innova Tech is a collaborative hub for innovation. If you're passionate about te
 
 For inquiries, collaborations, or to learn more about the future of technology, contact:
 
-- Email: hujulien123@gmail.com
+- Email: info@innovatechpc.ca
 - LinkedIn: [Julien Hu](https://www.linkedin.com/in/julienhu/)
 - Phone: 438-929-5064
 

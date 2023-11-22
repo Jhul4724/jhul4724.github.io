@@ -6,7 +6,7 @@ body {
 
 /* Animating the specials and discounts text */
 .specials {
-  animation: pulse 2s ease-in-out infinite;
+  animation: pulse 1s ease-in-out infinite;
 }
 
 @keyframes pulse {
@@ -47,9 +47,6 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
-
-
-  
 
 .layout_padding {
   background-image: url(/images/Dream\ setup\ 2.jpg);
