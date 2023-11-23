@@ -654,6 +654,19 @@ textarea::placeholder {
   color: rgb(203, 203, 203); 
 }
 
+.forminput {
+  color: white;
+  resize: vertical;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  vertical-align: top;
+}
+
+.forminput::placeholder {
+  color: rgb(255, 255, 255); 
+}
+
 .contact_section button {
   background-color: #e2e2e2;
   padding: 12px 55px;
@@ -709,6 +722,44 @@ textarea::placeholder {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
+
+.popup-form #myModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.popup-form #myModal h2 {
+  margin-bottom: 15px;
+}
+
+.popup-form #myModal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup-form #overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
 
 .info_items {
   width: 90%;
@@ -818,3 +869,21 @@ textarea::placeholder {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+.send:hover {
+  color: #000000;
+  border: #000000 1px solid;
+  border-radius: 4px;
+  background-color: rgb(230, 0, 255);
+}
+
+.send {
+  color: #ffffff;
+  border: #ffffff 1px solid;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
