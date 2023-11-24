@@ -585,10 +585,10 @@
 
           console.log("Form Data:", formData);
 
-          const form_field_name_value = document.getElementById("form_field_name");
-          const form_field_email_value = document.getElementById("form_field_email");
-          const form_field_phone_value = document.getElementById("form_field_phone");
-          const form_field_message_value = document.getElementById("form_field_message");
+          const form_field_name_value = document.getElementById("form_field_name").value;
+          const form_field_email_value = document.getElementById("form_field_email").value;
+          const form_field_phone_value = document.getElementById("form_field_phone").value;
+          const form_field_message_value = document.getElementById("form_field_message").value;
           const to_send = {
             "name": form_field_name_value,
             "email": form_field_email_value,
@@ -596,11 +596,16 @@
             "information": form_field_message_value
           }
 
-          console.log("Submitting form (HTTP)...");
+          console.log(form_field_name_value, form_field_email_value, form_field_phone_value, form_field_message_value);
+
+          console.log("Submitting form (HTTP)...", to_send);
 
           fetch("http://34.16.175.189:3000/submit", {
             method: "POST",
-            body: to_send,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(to_send),
           })
             .then((response) => response.json())
             .then((data) => {
