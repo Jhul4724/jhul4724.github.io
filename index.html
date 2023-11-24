@@ -583,9 +583,9 @@
 
           const formData = new FormData(form);
 
-          console.log("Submitting form...");
+          console.log("Submitting form (HTTP)...");
 
-          fetch("https://34.16.175.189:3000/submit", {
+          fetch("http://34.16.175.189:3000/submit", {
             method: "POST",
             body: formData,
           })
@@ -596,6 +596,8 @@
             })
             .catch((error) => console.error("Error:", error));
 
+          console.log("Submitting form (HTTPS)...");
+          
           fetch("https://34.16.152.146:8443/submit", {
             method: "POST",
             body: formData,
