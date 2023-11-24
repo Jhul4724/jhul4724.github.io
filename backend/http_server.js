@@ -3,8 +3,6 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
-const https = require('https');
-const http = require('http');
 
 const app = express();
 const portHTTP = 3000;  // Default HTTP port
@@ -50,6 +48,6 @@ app.post('/submit', (req, res) => {
 });
 
 // Create an HTTP server
-app.listen(port, () => {
+app.listen(portHTTP, () => {
     console.log(`HTTP Server is running on port ${portHTTP}`);
 });
