@@ -4,3 +4,4 @@
 # Backend
 /backend/node_modules
 /backend/conf.json
+/backend/conf.txt

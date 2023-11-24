@@ -9,8 +9,10 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Read configuration from conf.json
-const rawdata = fs.readFileSync('./backend/conf.json');
+// Read the content of the file
+const rawdata = fs.readFileSync('./conf.txt', 'utf-8');
+
+// Parse the content as JSON
 const CONFIG = JSON.parse(rawdata);
 
 app.post('/submit', (req, res) => {
