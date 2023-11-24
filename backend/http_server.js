@@ -19,10 +19,9 @@ const CONFIG = JSON.parse(rawdata);
 
 app.post('/submit', (req, res) => {
     const { name, email, phone, information } = req.body;
-    console.log('req.body is', req.body);
 
     // Log that a message has been received and the name
-    console.log(`Received message from: ${name}`);
+    console.log(`Received message from: ${name} (${email} - ${phone}):\n\n${information}\n\n`);
 
     // Set up nodemailer with your email provider
     const transporter = nodemailer.createTransport({
