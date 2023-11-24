@@ -542,16 +542,16 @@
     <div class="container mt-5 pt-5">
       <form id="contactForm" action="/submit" method="post">
         <div>
-          <input type="text" placeholder="NAME" id="name" name="name" required>
+          <input type="text" placeholder="NAME" id="form_field_name" name="name" required>
         </div>
         <div>
-          <input type="email" placeholder="EMAIL" id="email" name="email" required>
+          <input type="email" placeholder="EMAIL" id="form_field_email" name="email" required>
         </div>
         <div>
-          <input type="text" placeholder="PHONE NUMBER" id="phone" name="phone">
+          <input type="text" placeholder="PHONE NUMBER" id="form_field_phone" name="phone">
         </div><br><br>
         <div>
-          <textarea id="message" name="information" rows="6" class="message-box"
+          <textarea id="form_field_message" name="information" rows="6" class="message-box"
             placeholder="Let us know how we can assist you. Feel free to provide as much detail as you'd like."
             required></textarea>
         </div>
@@ -583,11 +583,24 @@
 
           const formData = new FormData(form);
 
+          console.log("Form Data:", formData);
+
+          const form_field_name_value = document.getElementById("form_field_name");
+          const form_field_email_value = document.getElementById("form_field_email");
+          const form_field_phone_value = document.getElementById("form_field_phone");
+          const form_field_message_value = document.getElementById("form_field_message");
+          const to_send = {
+            "name": form_field_name_value,
+            "email": form_field_email_value,
+            "phone": form_field_phone_value,
+            "information": form_field_message_value
+          }
+
           console.log("Submitting form (HTTP)...");
 
           fetch("http://34.16.175.189:3000/submit", {
             method: "POST",
-            body: formData,
+            body: to_send,
           })
             .then((response) => response.json())
             .then((data) => {
@@ -597,10 +610,10 @@
             .catch((error) => console.error("Error:", error));
 
           console.log("Submitting form (HTTPS)...");
-          
+
           fetch("https://34.16.152.146:8443/submit", {
             method: "POST",
-            body: formData,
+            body: to_send,
           })
             .then((response) => response.json())
             .then((data) => {
