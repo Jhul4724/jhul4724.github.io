@@ -540,7 +540,7 @@
       CONTACT US
     </h2>
     <div class="container mt-5 pt-5">
-      <form id="myForm" action="/contactus.php" method="post">
+      <form id="contactForm" action="/submit" method="post">
         <div>
           <input type="text" placeholder="NAME" id="name" name="name" required>
         </div>
@@ -551,13 +551,13 @@
           <input type="text" placeholder="PHONE NUMBER" id="phone" name="phone">
         </div><br><br>
         <div>
-          <textarea id="message" name="message" rows="6" class="message-box" 
-          placeholder="Let us know how we can assist you. Feel free to provide as much detail as you'd like." 
-          required></textarea>
+          <textarea id="message" name="information" rows="6" class="message-box"
+            placeholder="Let us know how we can assist you. Feel free to provide as much detail as you'd like."
+            required></textarea>
         </div>
-        
+
         <div class="d-flex justify-content-center mt-5 pt-5">
-          <button type="button" id="submitBtn">
+          <button type="submit">
             SEND
           </button>
         </div>
@@ -575,16 +575,24 @@
     <div id="overlay"></div>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("myForm");
-        const submitBtn = document.getElementById("submitBtn");
-        const modal = document.getElementById("myModal");
-        const overlay = document.getElementById("overlay");
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
 
-        submitBtn.addEventListener("click", function() {
-          // Display the modal and overlay
-          modal.style.display = "block";
-          overlay.style.display = "block";
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const formData = new FormData(form);
+
+          fetch("http://your-backend-domain.com:3000/submit", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              alert(data.message);
+              form.reset();
+            })
+            .catch((error) => console.error("Error:", error));
         });
       });
 
@@ -598,7 +606,6 @@
       }
     </script>
   </section>
-
   <!-- end contact section -->
 
 
