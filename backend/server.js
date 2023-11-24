@@ -18,6 +18,9 @@ const CONFIG = JSON.parse(rawdata);
 app.post('/submit', (req, res) => {
     const { name, email, phone, information } = req.body;
 
+    // Log that a message has been received and the name
+    console.log(`Received message from: ${name}`);
+
     // Set up nodemailer with your email provider
     const transporter = nodemailer.createTransport({
         service: 'gmail',
