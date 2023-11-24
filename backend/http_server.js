@@ -2,14 +2,12 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const cors = require('cors');
 
 const app = express();
 const portHTTP = 3000;  // Default HTTP port
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(cors());
 
 // Read the content of the file
 const rawdata = fs.readFileSync('./conf.txt', 'utf-8');

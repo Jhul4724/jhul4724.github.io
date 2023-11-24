@@ -54,14 +54,6 @@ app.post('/submit', (req, res) => {
     });
 });
 
-// HTTP server
-const httpServer = http.createServer(app);
-const httpPort = 3000;
-
-httpServer.listen(httpPort, () => {
-  console.log(`HTTP Server is running on port ${httpPort}`);
-});
-
 // Create an HTTPS server
 const httpsServer = https.createServer(credentials, app);
 
