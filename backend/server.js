@@ -6,7 +6,8 @@ const cors = require('cors');
 const https = require('https');
 
 const app = express();
-const port = 3000;
+const portHTTP = 80;  // Default HTTP port
+const portHTTPS = 443;  // Default HTTPS port
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -53,10 +54,22 @@ app.post('/submit', (req, res) => {
     });
 });
 
+// Create an HTTPS server
 const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+// Create an HTTP server to redirect to HTTPS
+const httpServer = http.createServer((req, res) => {
+  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
+  res.end();
+});
+
+// Listen on both HTTP and HTTPS ports
+httpServer.listen(portHTTP, () => {
+  console.log(`HTTP Server is running on port ${portHTTP}`);
+});
+
+httpsServer.listen(portHTTPS, () => {
+  console.log(`HTTPS Server is running on port ${portHTTPS}`);
 });
 
 // app.listen(port, () => {
