@@ -7,7 +7,6 @@ const https = require('https');
 const http = require('http');
 
 const app = express();
-const portHTTP = 3000;  // Default HTTP port
 const portHTTPS = 8443;  // Default HTTPS port
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -57,17 +56,6 @@ app.post('/submit', (req, res) => {
 
 // Create an HTTPS server
 const httpsServer = https.createServer(credentials, app);
-
-// Create an HTTP server to redirect to HTTPS
-const httpServer = http.createServer((req, res) => {
-  res.writeHead(301, { "Location": "https://" + req.headers['host'] + req.url });
-  res.end();
-});
-
-// Listen on both HTTP and HTTPS ports
-httpServer.listen(portHTTP, () => {
-  console.log(`HTTP Server is running on port ${portHTTP}`);
-});
 
 httpsServer.listen(portHTTPS, () => {
   console.log(`HTTPS Server is running on port ${portHTTPS}`);
