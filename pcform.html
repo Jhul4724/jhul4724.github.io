@@ -92,109 +92,98 @@
                               <h6> <i>A <b>25% deposit</b> is required before we begin building your PC. Thank you for
                                       your cooperation.</i> </h6>
                               <br>
-                              <form id="buildPcForm" class="popup-form" action="pcform.php" method="post" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); padding: 15px;">
+                              <form id="buildPcForm" class="popup-form" action="https://formspree.io/f/mleyyewd" method="post" style="background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); padding: 15px;">
                                   <h2> Contact Information</h2>
                                   <div>
-                                      <input class="forminput" type="text" id="name" name="name"
+                                      <input class="forminput" type="text" id="name" name="First and Last Name"
                                           placeholder="First and Last Name" required> <br>
                                       <br>
-                                      <input class="forminput" type="email" id="email" name="email"
-                                          placeholder="Email Address" required> <br>
+                                      <input class="forminput" type="email" id="email" name="Email Address" placeholder="Email Address" required> <br>
                                       <br>
-                                      <input class="forminput" type="tel" id="phone" name="phone"
+                                      <input class="forminput" type="tel" id="phone" name="Phone Number"
                                           placeholder="Phone Number" required> <br>
                                       <br>
   
                                       <h2> PC Customization Form</h2>
   
                                       <label for="budget">1. What is your full budget?</label> <br>
-                                      <input class="forminput" type="text" id="budget" name="budget" placeholder="$"
-                                          required> <br>
+                                      <input class="forminput" type="text" id="budget" name="Client's Budget" placeholder="$" required> <br>
                                       <br>
-                                      <label for="usage">2. What is your intended usage?</label> <br>
-                                      <label class="formlabel"><input type="checkbox" id="usage-gaming" name="usage[]"
-                                              value="gaming">Gaming</label> <br>
-                                      <label><input type="checkbox" id="usage-streaming" name="usage[]"
-                                              value="streaming"><span>Streaming</span></label> <br>
-                                      <label><input type="checkbox" id="usage-design" name="usage[]"
-                                              value="graphic_design">Graphic Design</label> <br>
-                                      <label><input type="checkbox" id="usage-editing" name="usage[]"
-                                              value="video_editing">Video Editing</label> <br>
-                                      <label><input type="checkbox" id="usage-other" name="usage[]"
-                                              value="other"><input class="forminput" style="width: 87%;" id="usage"
-                                              name="usage[]" placeholder="Other (Please specify)"></label> <br> <br>
+                                      <label for="Utilization">2. What is your intended usage?</label> <br>
+                                      <label><input type="checkbox" id="usage-gaming" name="Utilization" value="gaming">Gaming</label> <br>
+                                      <label><input type="checkbox" id="usage-streaming" name="Utilization" value="streaming"><span>Streaming</span></label> <br>
+                                      <label><input type="checkbox" id="usage-design" name="Utilization" value="graphic_design">Graphic Design</label> <br>
+                                      <label><input type="checkbox" id="usage-editing" name="Utilization" value="video_editing">Video Editing</label> <br>
+                                      <label><input type="checkbox" id="usage-other" name="Utilization" value="other"><input class="forminput" style="width: 87%;" id="usage"
+                                        name="Utilization" placeholder="Other (Please specify)"></label> <br> <br>
                                       <label for="games-programs-used">3. What games/programs do you use?</label> <br>
-                                      <textarea class="forminput" id="games-programs-used" name="games-programs-used"
-                                          rows="2" placeholder=""></textarea> <br>
+                                      <textarea class="forminput" id="games-programs-used" name="Games/Programs Used"
+                                        rows="2" placeholder=""></textarea> <br>
                                       <br>
-                                      <label for="resolution">4. On what resolution do you plan to game/work on?</label> <br>
-                                      <label><input type="radio" id="resolution-X" name="resolution" value="2160p">I am
+                                      <label for="Monitor's Resolution">4. On what resolution do you plan to game/work on?</label> <br>
+                                      <label><input type="radio" id="resolution-X" name="Monitor's Resolution" value="2160p">I am
                                           not sure yet.</label> <br>
-                                      <label><input type="radio" id="resolution-1080" name="resolution"
+                                      <label><input type="radio" id="resolution-1080" name="Monitor's Resolution"
                                               value="1080p">1080p</label> <br>
-                                      <label><input type="radio" id="resolution-1440" name="resolution"
+                                      <label><input type="radio" id="resolution-1440" name="Monitor's Resolution"
                                               value="1440p">1440p (2k)</label> <br>
-                                      <label><input type="radio" id="resolution-2160" name="resolution"
+                                      <label><input type="radio" id="resolution-2160" name="Monitor's Resolution"
                                               value="2160p">2160p (4k)</label> <br>
-                                      <label><input type="radio" id="resolution-2880" name="resolution"
+                                      <label><input type="radio" id="resolution-2880" name="Monitor's Resolution"
                                               value="2880p">2880p (5k)</label> <br>
                                       <br>
-                                      <label for="networking">5. Do you require networking capabilities?</label> <br>
-                                      <label><input type="radio" id="ethernet" name="networking" value="ethernet">Ethernet
-                                      </label> <br>
-                                      <label><input type="radio" id="wifi" name="networking" value="wifi">Ethernet &
-                                          Wifi</label> <br>
+                                      <label for="Networking">5. Do you require networking capabilities?</label> <br>
+                                      <label><input type="radio" id="ethernet" name="Networking" value="ethernet">Ethernet</label> <br>
+                                      <label><input type="radio" id="wifi" name="Networking" value="wifi">Ethernet & Wifi</label> <br>
                                       <br>
-                                      <label for="aesthetic">6. How much RGB do you want? Use the slider (from none to
-                                          extra).</label> <br>
-                                      <div class="slidecontainer">
-                                          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                                      </div>
+                                      <label for="aesthetic">6. How much RGB do you want? Use the slider (from none to extra).</label>
                                       <br>
-                                      <label for="color">7. Do you wish to have specific color themes (if
-                                          possible)?</label> <br>
+                                      <input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="RGB %">
+                                      <br>
+                                      <label for="Color Themes">7. Do you wish to have specific color themes (if possible)?</label> <br>
                                       <!-- For "color" checkboxes -->
                                       <label><input type="checkbox" id="color-black" name="color[]" value="black">black</label><br>
                                       <label><input type="checkbox" id="color-white" name="color[]" value="white">White</label><br>
                                       <label><input type="checkbox" id="color-red" name="color[]" value="red">Red</label><br>
                                       <label><input type="checkbox" id="color-x" name="color[]" value="other">I don't
                                           mind</label><br>
-                                      <label><input type="checkbox" id="color-other" name="color[]" value="other"><input
-                                              class="forminput" style="width: 87%;" name="color_other"
-                                              placeholder="Other (Please specify)"></label><br>
+                                      <label><input type="checkbox" id="color-other" name="color[]" value="other">
+                                        <input class="forminput" style="width: 87%;" name="color[]" placeholder="Other (Please specify)">
+                                      </label>
+                                      <br>
                                       <br>
                                       <br>
                                       <label for="additional_customization">8. Do you have any additional customization
                                           requests?</label> <br>
                                       <textarea style="height: 100px;" class="forminput" id="additional_customization"
-                                          name="additional_customization"></textarea> <br>
+                                          name="Additional Customization Requests"></textarea> <br>
                                       <br>
                                       <label for="notes">9. Notes:</label> <br>
-                                      <textarea style="height: 100px;" class="forminput" id="notes" name="notes"></textarea>
+                                      <textarea style="height: 100px;" class="forminput" id="notes" name="Notes"></textarea>
                                       <br>
                                       <br>
                                       <label for="timing">10. When is the desired date for the completion of your own
                                           custom built PC?
                                           Please note that processing usually takes 4 to 7 business days.</label> <br>
-                                      <input type="date" id="timing" name="timing" required> <br>
+                                      <input type="date" id="timing" name="Date needed" required> <br>
                                       <br><br>
-                                      <input type="checkbox" id="terms" name="terms" required>
+                                      <input type="checkbox" id="terms" name="I agree to the terms and conditions" required>
                                       <label for="terms">I have <i>read</i> and <i>agree</i> to our<i><a
                                               href="terms.html" style="background-color: transparent; border: transparent;">terms
                                               and conditions.</a></i></label>
                                       <br><br>
-                                      <button type="button" id="submitButton" class="send">
+                                      <button type="submit" id="submitButton" class="send">
                                           SEND
                                       </button>
                                       <br><br>
+                                      <!-- Javascript for the pop up onClick button, not needed for formspree, since formspree sends a popup
                                       <div id="myModal" class="popup">
                                           <span class="close" onclick="closeModal()">&times;</span>
                                           <h2>Thank you for your message!!!</h2>
                                           <p>We will contact you shortly. In the meantime, check out our Instagram
                                               <i>Innova_TechPC</i>!</p>
                                       </div>
-  
-                                      <!-- The overlay -->
+
                                       <div id="overlay" class="overlay"></div>
                                       
   
@@ -221,6 +210,7 @@
                                               overlay.style.display = "none";
                                           }
                                       </script>
+                                      -->
                                   </div>
                               </form>
                           </div>

@@ -540,38 +540,34 @@
       CONTACT US
     </h2>
     <div class="container mt-5 pt-5">
-      <form id="contactForm" action="/submit" method="post">
+      <form id="contactForm" action="https://formspree.io/f/xwkddkva" method="post">
         <div>
-          <input type="text" placeholder="NAME" id="form_field_name" name="name" required>
+          <input type="text" placeholder="NAME" id="form_field_name" name="First and Last Name" required>
         </div>
         <div>
-          <input type="email" placeholder="EMAIL" id="form_field_email" name="email" required>
+          <input type="email" placeholder="EMAIL" id="form_field_email" name="Email Address" required>
         </div>
         <div>
-          <input type="text" placeholder="PHONE NUMBER" id="form_field_phone" name="phone">
+          <input type="text" placeholder="PHONE NUMBER" id="form_field_phone" name="Phone Number">
         </div><br><br>
         <div>
-          <textarea id="form_field_message" name="information" rows="6" class="message-box"
-            placeholder="Let us know how we can assist you. Feel free to provide as much detail as you'd like."
-            required></textarea>
+          <textarea id="form_field_message" name="Message" rows="6" class="message-box"
+            placeholder="Let us know how we can assist you. Feel free to provide as much detail as you'd like." required></textarea>
         </div>
 
         <div class="d-flex justify-content-center mt-5 pt-5">
-          <button type="submit">
-            SEND
-          </button>
+          <button type="submit">SEND</button>
         </div>
       </form>
     </div>
 
-    <!-- The modal -->
+    <!--
     <div id="myModal">
       <span class="close" onclick="closeModal()">&times;</span>
       <h2>Thank you for your message!!!</h2>
       <p>We will contact you shortly. In the meantime, check out our Instagram <i>Innova_TechPC</i> !</p>
     </div>
 
-    <!-- The overlay -->
     <div id="overlay"></div>
 
     <script>
@@ -633,7 +629,7 @@
         modal.style.display = "none";
         overlay.style.display = "none";
       }
-    </script>
+    </script> -->
   </section>
   <!-- end contact section -->
 
