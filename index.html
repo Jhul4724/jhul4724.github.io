@@ -583,7 +583,9 @@
 
           const formData = new FormData(form);
 
-          fetch("http://34.16.152.146:3000/submit", {
+          console.log("Submitting form...");
+
+          fetch("https://34.16.152.146:3000/submit", {
             method: "POST",
             body: formData,
           })
