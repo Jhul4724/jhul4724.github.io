@@ -3,6 +3,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const cors = require('cors');
+const https = require('https');
 
 const app = express();
 const port = 3000;
@@ -16,6 +17,11 @@ const rawdata = fs.readFileSync('./conf.txt', 'utf-8');
 
 // Parse the content as JSON
 const CONFIG = JSON.parse(rawdata);
+
+// Load SSL/TLS certificates
+const privateKey = fs.readFileSync('private-key.pem', 'utf8');
+const certificate = fs.readFileSync('certificate.pem', 'utf8');
+const credentials = { key: privateKey, cert: certificate };
 
 app.post('/submit', (req, res) => {
     const { name, email, phone, information } = req.body;
@@ -47,6 +53,12 @@ app.post('/submit', (req, res) => {
     });
 });
 
-app.listen(port, () => {
+const httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+// app.listen(port, () => {
+//     console.log(`Server is running on port ${port}`);
+// });
