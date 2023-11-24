@@ -596,10 +596,6 @@
             "information": form_field_message_value
           }
 
-          console.log(form_field_name_value, form_field_email_value, form_field_phone_value, form_field_message_value);
-
-          console.log("Submitting form (HTTP)...", to_send);
-
           fetch("http://34.16.175.189:3000/submit", {
             method: "POST",
             headers: {
