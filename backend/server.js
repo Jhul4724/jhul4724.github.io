@@ -7,7 +7,7 @@ const https = require('https');
 const http = require('http');
 
 const app = express();
-const portHTTP = 80;  // Default HTTP port
+const portHTTP = 3000;  // Default HTTP port
 const portHTTPS = 443;  // Default HTTPS port
 
 app.use(bodyParser.urlencoded({ extended: false }));
